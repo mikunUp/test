@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	r, err := fizzBuzz(122)
+	r, err := fizzBuzz(12)
 
 	if err != nil {
 		log.Fatal(err)

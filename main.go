@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
+	"log"
 )
 
 func main() {
-	r, err := fizzBuzz(12)
+	r, err := fizzBuzz(122)
 
 	if err != nil {
-		fmt.Printf("test")
+		log.Fatal(err)
+		return
 	}
 	s := string(r)
 	fmt.Printf(s)
@@ -16,7 +18,7 @@ func main() {
 
 func fizzBuzz(n int) (string, error) {
 	if n < 1 || n > 100 {
-		return "", fmt.Errorf("invalid number: $v", n)
+		return "", fmt.Errorf("invalid number", n)
 	}
 
 	switch {
